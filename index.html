@@ -1,29 +1,237 @@
 <!doctype html>
+<!-- ↑ 告诉浏览器这是 HTML5 文档，避免兼容性问题 -->
+
 <html lang="en">
+<!-- ↑ 网页语言：en=英文（学术主页一般用英文；不影响你写中文） -->
+
 <head>
   <meta charset="utf-8" />
+  <!-- ↑ 设置字符编码为 UTF-8，确保中文、特殊符号（如 é）不乱码 -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- ↑ 移动端自适应：手机上不会缩放错乱 -->
+
   <title>Yixiu Xiao</title>
+  <!-- ↑ 浏览器标签页标题，也影响搜索引擎显示 -->
+
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; margin:48px auto; max-width:900px; padding:0 18px; line-height:1.65;}
-    .sub{color:#666}
-    a{color:#0b57d0; text-decoration:none}
+    /* ========= 颜色变量：统一管理颜色，后面好改 ========= */
+    :root{
+      --text:#111;       /* 正文主文字颜色 */
+      --muted:#666;      /* 次要文字颜色（灰） */
+      --border:#e6e6e6;  /* 边框颜色（浅灰） */
+      --link:#0b57d0;    /* 链接颜色 */
+      --bg:#ffffff;      /* 页面背景色 */
+      --card:#fafafa;    /* 小标签(pill)背景色 */
+    }
+
+    /* ========= 整体页面排版：字体、宽度、边距、行距 ========= */
+    body{
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      /* ↑ 字体：优先用系统字体，干净且适合学术主页 */
+
+      margin:56px auto;
+      /* ↑ 上下 56px，左右 auto 让页面居中 */
+
+      max-width:980px;
+      /* ↑ 页面最大宽度，避免一行太长难读 */
+
+      padding:0 20px;
+      /* ↑ 左右内边距，避免贴边 */
+
+      line-height:1.75;
+      /* ↑ 行距稍大一点，更舒服 */
+
+      color:var(--text);
+      background:var(--bg);
+    }
+
+    /* ========= 链接样式：蓝色、取消下划线，悬停出现下划线 ========= */
+    a{color:var(--link); text-decoration:none}
     a:hover{text-decoration:underline}
+
+    /* ========= 顶部区域布局：头像 + 右侧信息 两列排版 ========= */
+    .header{
+      display:flex;          /* 用 flex 做横向布局 */
+      gap:28px;              /* 两列之间的间距 */
+      align-items:flex-start;/* 顶端对齐 */
+      flex-wrap:wrap;        /* 窗口窄时自动换行（移动端友好） */
+      margin-bottom:18px;    /* 和下面内容留一点空隙 */
+    }
+
+    /* ========= 头像样式：大小、圆角、裁剪方式 ========= */
+    .avatar{
+      width:150px;            /* 头像宽 */
+      height:150px;           /* 头像高 */
+      border-radius:18px;     /* 圆角 */
+      object-fit:cover;       /* 保证图片填满并居中裁剪 */
+      border:1px solid var(--border); /* 细边框 */
+      background:#fff;
+    }
+
+    /* ========= 主标题（你的名字） ========= */
+    h1{
+      margin:0 0 6px 0;       /* 上0 下6px */
+      font-size:40px;         /* 字号 */
+      letter-spacing:-0.5px;  /* 轻微紧凑一点更高级 */
+    }
+
+    /* ========= 副标题（身份/单位） ========= */
+    .subtitle{
+      margin:0 0 14px 0;
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    /* ========= 邮箱/CV/Scholar 等信息：按“每行一个”显示 ========= */
+    .links{
+      display:flex;
+      flex-direction:column;  /* 竖排：每条信息一行 */
+      gap:6px;                /* 行间距 */
+      margin-top:6px;
+      font-size:16px;
+    }
+
+    /* ========= 每行左侧标签宽度固定：Email/CV/Scholar 对齐 ========= */
+    .links .label{
+      color:var(--muted);
+      width:78px;             /* 固定宽度，保证冒号后内容对齐 */
+      display:inline-block;
+    }
+
+    /* ========= 研究方向小标签（pill）排版 ========= */
+    .pillrow{margin-top:12px}
+    .pill{
+      display:inline-block;
+      padding:3px 10px;
+      border:1px solid var(--border);
+      border-radius:999px;    /* 胶囊形状 */
+      font-size:13px;
+      color:#444;
+      background:var(--card);
+      margin:0 8px 8px 0;     /* 多个标签之间间距 */
+    }
+
+    /* ========= 分割线 ========= */
+    .divider{
+      height:1px;
+      background:var(--border);
+      margin:18px 0 0;
+    }
+
+    /* ========= 二级标题：Research / Publications ========= */
+    h2{
+      margin:26px 0 10px 0;
+      font-size:22px;
+    }
+
+    /* ========= 段落间距 ========= */
+    p{margin:10px 0}
+
+    /* ========= 列表缩进与行距（出版物列表） ========= */
     ul{padding-left:18px}
+    li{margin:10px 0}
+
+    /* ========= 出版物标题加粗 ========= */
+    .pubtitle{font-weight:700}
+
+    /* ========= 页脚（最后更新时间）样式 ========= */
+    .note{
+      color:var(--muted);
+      font-size:14px;
+      margin-top:26px;
+    }
   </style>
 </head>
+
 <body>
-  <h1>Yixiu Xiao</h1>
-  <p class="sub">PhD Candidate in Mathematics · Shanghai Jiao Tong University / UNSW Sydney</p>
-  <p>Email: <a href="mailto:yixiuxiao98@gmail.com">yixiuxiao98@gmail.com</a> · <a href="CV_Template_25_01_2026.pdf">CV (PDF)</a>
+  <!-- ========= 顶部信息区：头像 + 姓名 + 单位 + 联系方式 ========= -->
+  <div class="header">
 
+    <!-- 【头像】请你把头像上传到仓库：assets/me.jpg
+         1) 仓库里 Add file → Upload files
+         2) 建 assets 文件夹并上传 me.jpg
+         如果你头像是 png，就把下面的 me.jpg 改成 me.png -->
+    <img class="avatar" src="assets/me.jpg" alt="Portrait of Yixiu Xiao" />
 
+    <!-- 右侧：姓名、单位、链接、关键词 -->
+    <div>
+      <!-- 【姓名】主页大标题 -->
+      <h1>Yixiu Xiao</h1>
+
+      <!-- 【身份/单位】副标题 -->
+      <p class="subtitle">PhD Candidate in Mathematics · Shanghai Jiao Tong University / UNSW Sydney</p>
+
+      <!-- 【联系方式与链接】每行一条，避免挤在同一行 -->
+      <div class="links">
+        <!-- 邮箱：mailto 可以让别人点击直接发邮件 -->
+        <div>
+          <span class="label">Email</span>
+          <a href="mailto:yixiuxiao98@gmail.com">yixiuxiao98@gmail.com</a>
+        </div>
+
+        <!-- CV：你现在 CV 在 files 文件夹里，文件名是 CV_Template_25_01_2026.pdf -->
+        <div>
+          <span class="label">CV</span>
+          <a href="files/CV_Template_25_01_2026.pdf">PDF</a>
+        </div>
+
+        <!-- 下面三行：如果你有对应链接，就把 # 改成你的链接；没有就删掉整行 -->
+        <!-- Google Scholar 示例 -->
+        <!--
+        <div>
+          <span class="label">Scholar</span>
+          <a href="https://scholar.google.com/citations?user=你的ID">Google Scholar</a>
+        </div>
+        -->
+
+        <!-- arXiv 作者页面示例 -->
+        <!--
+        <div>
+          <span class="label">arXiv</span>
+          <a href="https://arxiv.org/search/?searchtype=author&query=Xiao%2C+Y">Author page</a>
+        </div>
+        -->
+
+        <!-- GitHub 示例（你自己的主页） -->
+        <!--
+        <div>
+          <span class="label">GitHub</span>
+          <a href="https://github.com/yixiuxiao98">yixiuxiao98</a>
+        </div>
+        -->
+      </div>
+
+      <!-- 【研究方向关键词标签】放 3~6 个最合适 -->
+      <div class="pillrow">
+        <span class="pill">Analytic Number Theory</span>
+        <span class="pill">Exponential Sums</span>
+        <span class="pill">Kloosterman / Salié Sums</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 分割线：把顶部“名片区”和下面内容分开 -->
+  <div class="divider"></div>
+
+  <!-- ========= Research（研究简介） ========= -->
   <h2>Research</h2>
-  <p>Analytic number theory; exponential sums; Kloosterman/Salié sums; …</p>
+  <!-- 你可以把 … 换成更具体的一句话简介（推荐 2~4 句） -->
+  <p>
+    Analytic number theory; exponential sums; Kloosterman and Salié sums; distribution of arithmetic functions; …
+  </p>
 
+  <!-- ========= Publications & Preprints（论文与预印本） ========= -->
   <h2>Publications & Preprints</h2>
   <ul>
-    <li><b>Paper title</b>, with coauthors, <i>arXiv / Journal</i>, Year. [<a href="#">arXiv</a>]</li>
+    <!-- 每篇论文一条 li；Paper title 用加粗；arXiv/PDF 放在后面 -->
+    <li>
+      <span class="pubtitle">Paper title</span>, with coauthors, <i>arXiv / Journal</i>, Year.
+      [<a href="#">arXiv</a>] [<a href="#">PDF</a>]
+    </li>
   </ul>
+
+  <!-- ========= 最后更新时间（建议保留） ========= -->
+  <p class="note">Last updated: 2026-01-25</p>
 </body>
 </html>
