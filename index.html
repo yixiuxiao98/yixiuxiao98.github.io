@@ -51,7 +51,7 @@
     a:hover{ text-decoration:underline; }
 
     /* =========================
-       3) 顶部导航栏：像你同事那种“ABOUT / RESEARCH / ...”
+       3) 顶部导航栏：ABOUT / RESEARCH / ...
        ========================= */
     .nav{
       position: sticky;   /* ↑ 滚动时吸顶 */
@@ -88,7 +88,7 @@
     }
 
     /* =========================
-       4) 顶部名片区：头像 + 右侧信息（更像学术主页）
+       4) 顶部名片区：头像 + 右侧信息
        ========================= */
     .header{
       display:grid;
@@ -103,13 +103,13 @@
       .header{ grid-template-columns: 1fr; }
     }
 
-    /* 头像卡片：你说头像不好看，这里用“固定尺寸 + 裁剪 + 圆角 + 阴影”改善观感 */
+    /* 头像卡片 */
     .avatar{
       width: 180px;
       height: 180px;
       border-radius: 18px;      /* ↑ 圆角（想要圆形就改成 999px） */
       object-fit: cover;         /* ↑ 自动裁剪填充，不变形 */
-      object-position: 50% 20%;  /* ↑ 关键：把人脸往上提一点（可改 50% 15% / 50% 30%） */
+      object-position: 50% 20%;  /* ↑ 把人脸往上提一点 */
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
       background: #fff;
@@ -136,7 +136,7 @@
       font-size: 15px;
     }
 
-    /* 联系方式：每条一行，避免挤在同一行 */
+    /* 联系方式：每条一行 */
     .links{
       display:flex;
       flex-direction: column;
@@ -147,7 +147,7 @@
 
     .label{
       display:inline-block;
-      width: 86px;          /* ↑ 左侧标签宽度固定，视觉整齐 */
+      width: 86px;
       color: var(--muted);
     }
 
@@ -158,7 +158,7 @@
     }
 
     /* =========================
-       5) 各栏目（section）样式：分条目、结构清晰
+       5) 各栏目（section）样式
        ========================= */
     section{
       margin-top: 26px;
@@ -211,19 +211,18 @@
 
 <body>
   <!-- =========================
-       顶部导航：点击跳到各栏目
+       顶部导航：去掉 CONTACT；加一个 CV 直链
        ========================= -->
   <div class="nav">
     <div class="nav-inner">
       <div class="nav-brand">Yixiu Xiao</div>
       <div class="nav-links">
-        <!-- ↓ 这些链接会跳到页面对应的 id -->
         <a href="#about">ABOUT</a>
         <a href="#research">RESEARCH</a>
         <a href="#publications">PUBLICATIONS</a>
         <a href="#talks">TALKS</a>
         <a href="#teaching">TEACHING</a>
-        <a href="#contact">CONTACT</a>
+        <a href="files/CV_Template_25_01_2026.pdf">CV</a>
       </div>
     </div>
   </div>
@@ -233,18 +232,16 @@
          主页顶端：头像 + 名片信息
          ========================= -->
     <div class="header">
-      <!-- 【头像】你当前文件名含空格，所以这里用 %20 编码 -->
+      <!-- 头像：文件名含空格，所以用 %20 -->
       <img class="avatar" src="assets/ID%20photo%202.jpg" alt="Portrait of Yixiu Xiao" />
 
       <div class="card">
         <h1>Yixiu Xiao (肖以修)</h1>
 
-        <!-- 【身份】按你说的：SJTU 博士 + UNSW 联培/访问，不拿 UNSW 学位 -->
         <p class="subtitle">
           PhD Candidate in Mathematics · Shanghai Jiao Tong University · Visiting Research Student at UNSW Sydney
         </p>
 
-        <!-- 【联系方式】每条一行，不会重复，也不会挤在同一行 -->
         <div class="links">
           <div>
             <span class="label">Email</span>
@@ -273,7 +270,7 @@
     </div>
 
     <!-- =========================
-         ABOUT：自我介绍（分条写更像你同事那种）
+         ABOUT
          ========================= -->
     <section id="about">
       <h2>About</h2>
@@ -285,10 +282,11 @@
     </section>
 
     <!-- =========================
-         RESEARCH：研究方向用条目列出
+         RESEARCH
          ========================= -->
     <section id="research">
       <h2>Research</h2>
+
       <h3>Interests</h3>
       <ul>
         <li>Analytic number theory</li>
@@ -299,75 +297,57 @@
 
       <h3>Current directions</h3>
       <ul>
-        <li>[方向 1：你可以写成一句话]</li>
-        <li>[方向 2：你可以写成一句话]</li>
+        <li>[Direction 1: one-sentence description]</li>
+        <li>[Direction 2: one-sentence description]</li>
       </ul>
     </section>
 
-    
-   <!-- =========================
-     Publications（论文列表）
-     直接整体替换你原来的 publications 区域
-========================= -->
-<section id="publications">
-  <h2>Publications</h2>
+    <!-- =========================
+         PUBLICATIONS
+         ========================= -->
+    <section id="publications">
+      <h2>Publications</h2>
 
-  <!--【已发表】期刊正式发表的论文 -->
-  <h3>Published</h3>
-  <ul>
-    <li>
-      <!-- 论文题目（加粗） -->
-      <span class="pubtitle">Least Zero of a Cubic Form</span>,
-      <!-- 合作者 -->
-      with Hongze Li,
-      <!-- 期刊信息 + DOI -->
-      <i>Frontiers of Mathematics</i>, 2025.
-      DOI:
-      <a href="https://doi.org/10.1007/s11464-024-0113-6">10.1007/s11464-024-0113-6</a>
-    </li>
-  </ul>
+      <h3>Published</h3>
+      <ul>
+        <li>
+          <span class="pubtitle">Least Zero of a Cubic Form</span>,
+          with Hongze Li,
+          <i>Frontiers of Mathematics</i>, 2025.
+          DOI:
+          <a href="https://doi.org/10.1007/s11464-024-0113-6">10.1007/s11464-024-0113-6</a>
+        </li>
+      </ul>
 
-  <!--【已接收 / 待见刊】处于 proof/proofreading 阶段 -->
-  <h3>Accepted / To appear</h3>
-  <ul>
-    <li>
-      <span class="pubtitle">Least zero of pairs of additive cubic equations</span>,
-      with Hongze Li.
-      <!-- 说明当前状态：已接收，正在 proof 阶段 -->
-      <span class="sub">Accepted to appear in <i>Forum Mathematicum</i>; proof stage.</span>
+      <h3>Accepted / To appear</h3>
+      <ul>
+        <li>
+          <span class="pubtitle">Least zero of pairs of additive cubic equations</span>,
+          with Hongze Li.
+          <span class="sub">Accepted to appear in <i>Forum Mathematicum</i>; proof stage.</span>
 
-      <!-- arXiv 三个入口：abs / pdf / html（你给的是 html v2） -->
-      <a class="taglink" href="https://arxiv.org/abs/2510.10001">arXiv</a>
-      <a class="taglink" href="https://arxiv.org/pdf/2510.10001v2.pdf">PDF</a>
-      <a class="taglink" href="https://arxiv.org/html/2510.10001v2">HTML</a>
+          <a class="taglink" href="https://arxiv.org/abs/2510.10001">arXiv</a>
+          <a class="taglink" href="https://arxiv.org/pdf/2510.10001v2.pdf">PDF</a>
+          <a class="taglink" href="https://arxiv.org/html/2510.10001v2">HTML</a>
+        </li>
+      </ul>
 
-      <!-- 如果你想“更保守”，暂时不提 Forum：
-           把上面那句 “Accepted to appear in Forum Mathematicum...” 改成：
-           <span class="sub">Accepted; in proof stage.</span>
-      -->
-    </li>
-  </ul>
+      <h3>Preprints (arXiv)</h3>
+      <ul>
+        <li>
+          <span class="pubtitle">Shifted bilinear sums of Salié sums and the distribution of modular square roots of shifted primes</span>,
+          with Igor E. Shparlinski.
+          <span class="sub">Preprint.</span>
 
-  <!--【预印本】已上 arXiv，但尚未投 / 或尚未决定期刊 -->
-  <h3>Preprints (arXiv)</h3>
-  <ul>
-    <li>
-      <span class="pubtitle">Shifted bilinear sums of Salié sums and the distribution of modular square roots of shifted primes</span>,
-      with Igor E. Shparlinski.
-      <!-- 状态说明（可改成：Submitted / In preparation / Under review 等） -->
-      <span class="sub">Preprint.</span>
-
-      <!-- arXiv：abs / pdf / html -->
-      <a class="taglink" href="https://arxiv.org/abs/2601.10113">arXiv</a>
-      <a class="taglink" href="https://arxiv.org/pdf/2601.10113.pdf">PDF</a>
-      <a class="taglink" href="https://arxiv.org/html/2601.10113v1">HTML</a>
-    </li>
-  </ul>
-</section>
-
+          <a class="taglink" href="https://arxiv.org/abs/2601.10113">arXiv</a>
+          <a class="taglink" href="https://arxiv.org/pdf/2601.10113.pdf">PDF</a>
+          <a class="taglink" href="https://arxiv.org/html/2601.10113v1">HTML</a>
+        </li>
+      </ul>
+    </section>
 
     <!-- =========================
-         TALKS：报告/演讲（先留模板）
+         TALKS
          ========================= -->
     <section id="talks">
       <h2>Talks</h2>
@@ -377,7 +357,7 @@
     </section>
 
     <!-- =========================
-         TEACHING：教学/助教（先留模板）
+         TEACHING
          ========================= -->
     <section id="teaching">
       <h2>Teaching</h2>
@@ -386,8 +366,6 @@
       </ul>
     </section>
 
-    
-
     <!-- 页脚 -->
     <div class="footer">
       Last updated: 2026-01-25
@@ -395,5 +373,4 @@
   </div>
 </body>
 </html>
-
 
