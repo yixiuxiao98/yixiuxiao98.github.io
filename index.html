@@ -1,21 +1,14 @@
 <!doctype html>
-<!-- ↑ 声明 HTML5 文档 -->
-
 <html lang="en">
-<!-- ↑ 网页语言，学术主页常用英文 -->
 
 <head>
   <meta charset="utf-8" />
-  <!-- ↑ UTF-8 编码，避免中文/符号乱码 -->
-
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- ↑ 手机端自适应 -->
-
-  <title>Homepage of Yixiu Xiao</title>
+  <title>Yixiu Xiao</title>
 
   <style>
     /* =========================
-       1) 全局配色变量：想换风格只改这里
+       1) 全局配色变量
        ========================= */
     :root{
       --text:#111;
@@ -38,22 +31,23 @@
       line-height:1.75;
     }
 
-    /* 页面主内容居中 + 限宽 */
+    /* 防止任何图片撑爆布局（头像不受影响，因为固定宽高） */
+    img{ max-width: 100%; }
+
     .wrap{
       max-width: 980px;
       margin: 0 auto;
       padding: 28px 20px 60px;
     }
 
-    /* 链接颜色与 hover */
     a{ color:var(--link); text-decoration:none; }
     a:hover{ text-decoration:underline; }
 
     /* =========================
-       3) 顶部导航栏：ABOUT / RESEARCH / ...
+       3) 顶部导航栏
        ========================= */
     .nav{
-      position: sticky;   /* ↑ 滚动时吸顶 */
+      position: sticky;
       top: 0;
       z-index: 10;
       background: rgba(255,255,255,.92);
@@ -72,13 +66,11 @@
       flex-wrap: wrap;
     }
 
-    /* 左边显示名字缩写 */
     .nav-brand{
       font-weight: 700;
       letter-spacing: .2px;
     }
 
-    /* 右边菜单链接 */
     .nav-links{
       display:flex;
       gap:14px;
@@ -87,7 +79,7 @@
     }
 
     /* =========================
-       4) 顶部名片区：头像 + 右侧信息
+       4) 顶部名片区
        ========================= */
     .header{
       display:grid;
@@ -97,30 +89,23 @@
       margin-top: 18px;
     }
 
-    /* 手机端改成一列 */
     @media (max-width: 720px){
       .header{ grid-template-columns: 1fr; }
     }
 
-    /* ===== 用 PDF 当头像：wrapper + object ===== */
-    .avatar-wrap{
+    /* 头像：固定 180x180，不会溢出，不会重叠 */
+    .avatar{
       width: 180px;
       height: 180px;
-      border-radius: 18px;      /* 圆角 */
-      overflow: hidden;         /* 裁剪圆角 */
+      border-radius: 18px;
+      object-fit: cover;
+      object-position: 50% 20%;
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
       background: #fff;
-    }
-
-    .avatar-pdf{
-      width: 100%;
-      height: 100%;
       display: block;
-      border: 0;
     }
 
-    /* 右侧信息卡片 */
     .card{
       border:1px solid var(--border);
       background: var(--card);
@@ -141,7 +126,6 @@
       font-size: 15px;
     }
 
-    /* 联系方式：每条一行 */
     .links{
       display:flex;
       flex-direction: column;
@@ -163,7 +147,7 @@
     }
 
     /* =========================
-       5) 各栏目（section）样式
+       5) 各栏目样式
        ========================= */
     section{
       margin-top: 26px;
@@ -186,15 +170,10 @@
       margin: 8px 0 0;
     }
 
-    li{
-      margin: 10px 0;
-    }
+    li{ margin: 10px 0; }
 
-    .pubtitle{
-      font-weight: 700;
-    }
+    .pubtitle{ font-weight: 700; }
 
-    /* 小按钮风格（比如 arXiv / PDF） */
     .taglink{
       display:inline-block;
       border: 1px solid var(--border);
@@ -205,7 +184,6 @@
       margin-left: 6px;
     }
 
-    /* 页脚小字 */
     .footer{
       margin-top: 30px;
       color: var(--muted);
@@ -215,9 +193,6 @@
 </head>
 
 <body>
-  <!-- =========================
-       顶部导航：加一个 CV 直链
-       ========================= -->
   <div class="nav">
     <div class="nav-inner">
       <div class="nav-brand">Yixiu Xiao</div>
@@ -233,13 +208,9 @@
   </div>
 
   <div class="wrap">
-    <!-- =========================
-         主页顶端：头像 + 名片信息
-         ========================= -->
     <div class="header">
-      <!-- PDF 头像：object 内嵌 + fallback 链接 -->
+      <!-- 头像：请确保文件路径/大小写完全一致 -->
       <img class="avatar" src="assets/Me.png" alt="Portrait of Yixiu Xiao" />
-
 
       <div class="card">
         <h1>Yixiu Xiao (肖以修)</h1>
@@ -270,9 +241,6 @@
       </div>
     </div>
 
-    <!-- =========================
-         ABOUT
-         ========================= -->
     <section id="about">
       <h2>About</h2>
       <ul>
@@ -282,9 +250,6 @@
       </ul>
     </section>
 
-    <!-- =========================
-         RESEARCH INTERESTS
-         ========================= -->
     <section id="research-interests">
       <h2>Research Interests</h2>
 
@@ -303,9 +268,6 @@
       </ul>
     </section>
 
-    <!-- =========================
-         PUBLICATIONS
-         ========================= -->
     <section id="publications">
       <h2>Publications</h2>
 
@@ -347,9 +309,6 @@
       </ul>
     </section>
 
-    <!-- =========================
-         TALKS
-         ========================= -->
     <section id="talks">
       <h2>Talks</h2>
       <ul>
@@ -357,9 +316,6 @@
       </ul>
     </section>
 
-    <!-- =========================
-         TEACHING
-         ========================= -->
     <section id="teaching">
       <h2>Teaching</h2>
       <ul>
@@ -367,7 +323,6 @@
       </ul>
     </section>
 
-    <!-- 页脚 -->
     <div class="footer">
       Last updated: 26-Jan-2026
     </div>
