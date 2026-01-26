@@ -12,7 +12,6 @@
   <!-- ↑ 手机端自适应 -->
 
   <title>Yixiu Xiao</title>
-  <!-- ↑ 浏览器标签页标题 -->
 
   <style>
     /* =========================
@@ -103,16 +102,22 @@
       .header{ grid-template-columns: 1fr; }
     }
 
-    /* 头像卡片 */
-    .avatar{
+    /* ===== 用 PDF 当头像：wrapper + object ===== */
+    .avatar-wrap{
       width: 180px;
       height: 180px;
-      border-radius: 18px;      /* ↑ 圆角（想要圆形就改成 999px） */
-      object-fit: cover;         /* ↑ 自动裁剪填充，不变形 */
-      object-position: 50% 20%;  /* ↑ 把人脸往上提一点 */
+      border-radius: 18px;      /* 圆角 */
+      overflow: hidden;         /* 裁剪圆角 */
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
       background: #fff;
+    }
+
+    .avatar-pdf{
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: 0;
     }
 
     /* 右侧信息卡片 */
@@ -218,7 +223,7 @@
       <div class="nav-brand">Yixiu Xiao</div>
       <div class="nav-links">
         <a href="#about">ABOUT</a>
-        <a href="#research">RESEARCH</a>
+        <a href="#research-interests">RESEARCH</a>
         <a href="#publications">PUBLICATIONS</a>
         <a href="#talks">TALKS</a>
         <a href="#teaching">TEACHING</a>
@@ -232,8 +237,14 @@
          主页顶端：头像 + 名片信息
          ========================= -->
     <div class="header">
-      <!-- 头像：文件名含空格，所以用 %20 -->
-      <img class="avatar" src="assets/Me.pdf" alt="Portrait of Yixiu Xiao" />
+      <!-- PDF 头像：object 内嵌 + fallback 链接 -->
+      <div class="avatar-wrap">
+        <object class="avatar-pdf"
+                data="assets/Me.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                type="application/pdf">
+          <a href="assets/Me.pdf">Open portrait PDF</a>
+        </object>
+      </div>
 
       <div class="card">
         <h1>Yixiu Xiao (肖以修)</h1>
@@ -260,8 +271,6 @@
             <a href="mailto:yixiuxiao98@gmail.com">yixiuxiao98@gmail.com</a>
             <span class="sub">(Personal)</span>
           </div>
-
-          
         </div>
       </div>
     </div>
@@ -274,16 +283,15 @@
       <ul>
         <li>I am a PhD candidate in Mathematics at Shanghai Jiao Tong University.</li>
         <li>I am currently a visiting research student at UNSW Sydney.</li>
-        <li>My research focus is analytic number theory, <li>
-        <li>encompassing the estimation of exponential sums, the circle method, the sieve method, and other related techniques.</li>
+        <li>My research focus is analytic number theory, encompassing the estimation of exponential sums, the circle method, the sieve method, and other related techniques.</li>
       </ul>
     </section>
 
     <!-- =========================
-         RESEARCH
+         RESEARCH INTERESTS
          ========================= -->
-    <section id="research interests">
-      <h2>Research</h2>
+    <section id="research-interests">
+      <h2>Research Interests</h2>
 
       <h3>Interests</h3>
       <ul>
@@ -366,9 +374,10 @@
 
     <!-- 页脚 -->
     <div class="footer">
-      Last updated: 26-Jau-2026
+      Last updated: 26-Jan-2026
     </div>
   </div>
 </body>
 </html>
+
 
