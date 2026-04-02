@@ -7,9 +7,6 @@
   <title>Homepage of Yixiu Xiao</title>
 
   <style>
-    /* =========================
-       1) 全局配色变量
-       ========================= */
     :root{
       --text:#111;
       --muted:#666;
@@ -20,9 +17,6 @@
       --shadow: 0 8px 28px rgba(0,0,0,.06);
     }
 
-    /* =========================
-       2) 页面基础排版
-       ========================= */
     body{
       font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial;
       margin:0;
@@ -31,7 +25,6 @@
       line-height:1.75;
     }
 
-    /* 防止任何图片撑爆布局（头像不受影响，因为固定宽高） */
     img{ max-width: 100%; }
 
     .wrap{
@@ -43,9 +36,6 @@
     a{ color:var(--link); text-decoration:none; }
     a:hover{ text-decoration:underline; }
 
-    /* =========================
-       3) 顶部导航栏
-       ========================= */
     .nav{
       position: sticky;
       top: 0;
@@ -78,9 +68,6 @@
       font-size: 14px;
     }
 
-    /* =========================
-       4) 顶部名片区
-       ========================= */
     .header{
       display:grid;
       grid-template-columns: 180px 1fr;
@@ -93,7 +80,6 @@
       .header{ grid-template-columns: 1fr; }
     }
 
-    /* 头像：固定 180x180，不会溢出，不会重叠 */
     .avatar{
       width: 180px;
       height: 180px;
@@ -146,9 +132,6 @@
       margin-left: 6px;
     }
 
-    /* =========================
-       5) 各栏目样式
-       ========================= */
     section{
       margin-top: 26px;
       padding-top: 10px;
@@ -201,15 +184,15 @@
         <a href="#research-interests">RESEARCH</a>
         <a href="#publications">PUBLICATIONS</a>
         <a href="#talks">TALKS</a>
+        <a href="#research-experience">EXPERIENCE</a>
         <a href="#teaching">TEACHING</a>
-        <a href="files/CV_10_Mar_2026.pdf">CV</a>
+        <a href="files/CV_2_Apr_2026.pdf">CV</a>
       </div>
     </div>
   </div>
 
   <div class="wrap">
     <div class="header">
-      <!-- 头像：请确保文件路径/大小写完全一致 -->
       <img class="avatar" src="assets/Me.png" alt="Portrait of Yixiu Xiao" />
 
       <div class="card">
@@ -245,8 +228,8 @@
       <h2>About</h2>
       <ul>
         <li>I am a PhD candidate in Mathematics at Shanghai Jiao Tong University.</li>
-        <li>I am currently a visiting research student at UNSW Sydney.</li>
-        <li>My primary research focus is analytic number theory, alongside technical tools from harmonic analysis, additive combinatorics and other related fields.</li>
+        <li>I am currently a visiting research student at UNSW Sydney, working under the supervision of Prof. Igor E. Shparlinski.</li>
+        <li>My primary research area is analytic number theory, especially exponential and character sums and their applications in number theory.</li>
       </ul>
     </section>
 
@@ -256,17 +239,18 @@
       <h3>Interests</h3>
       <ul>
         <li>Distribution of rational points on curves and more general varieties over finite fields</li>
-        <li>Exponential sums and Character Sums</li>
-        <li>Other fields related to number theory, such as harmonic analysis and additive combinatorics</li>
+        <li>Exponential and character sums and their applications in number theory</li>
+        <li>Harmonic analysis and additive combinatorics in number theory</li>
       </ul>
 
       <h3>Current directions</h3>
       <ul>
-        <li>Shifted bilinear sums of Salié sums and the distribution of modular square roots of
-shifted primes</li>
-        <li>Sums of Kloosterman and Gauss Sums</li>
-        <li>Large sieve inequality over short intervals</li>
-        <li>Estimating Exponential Sums Related to the Möbius Function via the Delta Circle Method</li>
+        <li>Shifted bilinear sums of Salié sums and the distribution of modular square roots of shifted primes</li>
+        <li>Kloosterman and Gauss sums</li>
+        <li>Large sieve inequalities over short intervals</li>
+        <li>Estimating exponential sums related to the Möbius function via the Delta circle method</li>
+        <li>Fractional parts of sums of square roots</li>
+        <li>The square-free part of the palindromes</li>
       </ul>
     </section>
 
@@ -274,33 +258,31 @@ shifted primes</li>
       <h2>Publications</h2>
 
       <h3>Published</h3>
-<ul>
-  <li>
-    <span class="pubtitle">Least Zero of a Cubic Form</span>,
-    with Hongze Li,
-    <i>Frontiers of Mathematics</i>, 2025.
-    DOI:
-    <a href="https://doi.org/10.1007/s11464-024-0113-6">10.1007/s11464-024-0113-6</a>
-  </li>
-  <li>
-    <span class="pubtitle">Least zero of pairs of additive cubic equations</span>,
-    with Hongze Li,
-    <i>Forum Mathematicum</i>, 2026.
-    DOI:
-    <a href="https://doi.org/10.1515/forum-2025-0367">10.1515/forum-2025-0367</a>
-    <a class="taglink" href="https://arxiv.org/abs/2510.10001">arXiv</a>
-    <a class="taglink" href="https://arxiv.org/pdf/2510.10001v2.pdf">PDF</a>
-    <a class="taglink" href="https://arxiv.org/html/2510.10001v2">HTML</a>
-  </li>
-</ul>
+      <ul>
+        <li>
+          <span class="pubtitle">Least Zero of a Cubic Form</span>,
+          with Hongze Li,
+          <i>Frontiers of Mathematics</i>, 2025.
+          DOI:
+          <a href="https://doi.org/10.1007/s11464-024-0113-6">10.1007/s11464-024-0113-6</a>
+        </li>
+        <li>
+          <span class="pubtitle">Least Zero of Pairs of Additive Cubic Equations</span>,
+          with Hongze Li,
+          <i>Forum Mathematicum</i>, 2026.
+          DOI:
+          <a href="https://doi.org/10.1515/forum-2025-0367">10.1515/forum-2025-0367</a>
+          <a class="taglink" href="https://arxiv.org/abs/2510.10001">arXiv</a>
+          <a class="taglink" href="https://arxiv.org/pdf/2510.10001v2.pdf">PDF</a>
+          <a class="taglink" href="https://arxiv.org/html/2510.10001v2">HTML</a>
+        </li>
+      </ul>
 
       <h3>Preprints (arXiv)</h3>
       <ul>
         <li>
-          <span class="pubtitle">Shifted bilinear sums of Salié sums and the distribution of modular square roots of shifted primes</span>,
+          <span class="pubtitle">Shifted Bilinear Sums of Salié Sums and the Distribution of Modular Square Roots of Shifted Primes</span>,
           with Igor E. Shparlinski.
-          <span class="sub">Preprint.</span>
-
           <a class="taglink" href="https://arxiv.org/abs/2601.10113">arXiv</a>
           <a class="taglink" href="https://arxiv.org/pdf/2601.10113.pdf">PDF</a>
           <a class="taglink" href="https://arxiv.org/html/2601.10113v1">HTML</a>
@@ -309,48 +291,68 @@ shifted primes</li>
     </section>
 
     <section id="talks">
-  <h2>Talks</h2>
-  <ul>
-    <li>
-      <span class="pubtitle">Diophantine equations and cubic forms</span>,
-      <span class="sub">Prime Pals / Number Theory Group Seminar (internal)</span>,
-      UNSW Canberra, Canberra, 9 Sep, 2025.
-    </li>
+      <h2>Talks</h2>
+      <ul>
+        <li>
+          <span class="pubtitle">Diophantine equations and cubic forms</span>,
+          <span class="sub">Prime Pals / Number Theory Group Seminar (internal)</span>,
+          UNSW Canberra, Canberra, 9 Sep 2025.
+        </li>
 
-    <li>
-      <span class="pubtitle">Least zero of pairs of additive cubic equations</span>,
-      <span class="sub">AustMS Annual Meeting</span>,
-      La Trobe University, Melbourne, 10 Dec, 2025.
-    </li>
-  </ul>
-</section>
+        <li>
+          <span class="pubtitle">Least zero of pairs of additive cubic equations</span>,
+          <span class="sub">AustMS Annual Meeting</span>,
+          La Trobe University, Melbourne, 10 Dec 2025.
+        </li>
+      </ul>
+    </section>
 
+    <section id="research-experience">
+      <h2>Research Experience</h2>
+      <ul>
+        <li>
+          <span class="pubtitle">Research Assistant</span>,
+          Prof. Hongze Li, Shanghai Jiao Tong University, 2021–present.
+          Conducted research in analytic number theory, including exponential sums, character sums, Diophantine equations, and related problems in number theory. Participated in literature study, mathematical discussions, proof development, and manuscript preparation.
+        </li>
+        <li>
+          <span class="pubtitle">Research Assistant</span>,
+          School of Mathematics and Statistics, UNSW Sydney, 7 April 2026–present.
+          Supervisor: Prof. Igor E. Shparlinski.
+        </li>
+      </ul>
+    </section>
 
     <section id="teaching">
-  <h2>Teaching</h2>
-  <ul>
-    <li>
-      <span class="pubtitle">Mathematical Analysis</span>,
-      Teaching Assistant, Shanghai Jiao Tong University,
-      Fall terms (2021–2023).
-    </li>
-    <li>
-      <span class="pubtitle">Elementary Number Theory (Summer Term)</span>,
-      Teaching Assistant, Shanghai Jiao Tong University, 2022–2024.
-    </li>
-    <li>
-      <span class="pubtitle">MATH8000 Student Support (Student Supervision)</span>,
-      UNSW Sydney, Term 3 2025–present.
-    </li>
-  </ul>
-</section>
-
+      <h2>Teaching</h2>
+      <ul>
+        <li>
+          <span class="pubtitle">Mathematical Analysis</span>,
+          Teaching Assistant, Shanghai Jiao Tong University, Fall terms (2021–2023).
+        </li>
+        <li>
+          <span class="pubtitle">Elementary Number Theory (Summer Term)</span>,
+          Teaching Assistant, Shanghai Jiao Tong University, 2022–2024.
+        </li>
+        <li>
+          <span class="pubtitle">MATH8000 Student Support (Student Supervision)</span>,
+          UNSW Sydney, Term 3 2025.
+        </li>
+        <li>
+          <span class="pubtitle">MATH8000 Student Support (CTP)</span>,
+          UNSW Sydney, Term 1 2026–present.
+        </li>
+        <li>
+          <span class="pubtitle">MATH1141 Higher Mathematics 1A</span>,
+          Routine Marker, UNSW Sydney, Term 1 2026–present.
+        </li>
+      </ul>
+    </section>
 
     <div class="footer">
-      Last updated: 10-Mar-2026
+      Last updated: 2 Apr 2026
     </div>
   </div>
 </body>
 </html>
-
 
