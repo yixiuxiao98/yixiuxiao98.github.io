@@ -4,6 +4,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Academic homepage of Yixiu Xiao, a researcher in analytic number theory."
+  />
   <title>Homepage of Yixiu Xiao</title>
 
   <style>
@@ -14,159 +18,193 @@
       --link:#0b57d0;
       --bg:#ffffff;
       --card:#fbfbfb;
-      --shadow: 0 8px 28px rgba(0,0,0,.06);
+      --shadow:0 8px 28px rgba(0,0,0,.06);
     }
 
     body{
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
       margin:0;
       color:var(--text);
       background:var(--bg);
       line-height:1.75;
     }
 
-    img{ max-width: 100%; }
-
-    .wrap{
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 28px 20px 60px;
+    img{
+      max-width:100%;
     }
 
-    a{ color:var(--link); text-decoration:none; }
-    a:hover{ text-decoration:underline; }
+    .wrap{
+      max-width:980px;
+      margin:0 auto;
+      padding:28px 20px 60px;
+    }
+
+    a{
+      color:var(--link);
+      text-decoration:none;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
 
     .nav{
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(255,255,255,.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(255,255,255,.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--border);
     }
 
     .nav-inner{
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 10px 20px;
+      max-width:980px;
+      margin:0 auto;
+      padding:10px 20px;
       display:flex;
       gap:14px;
       align-items:center;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      justify-content:space-between;
+      flex-wrap:wrap;
     }
 
     .nav-brand{
-      font-weight: 700;
-      letter-spacing: .2px;
+      font-weight:700;
+      letter-spacing:.2px;
     }
 
     .nav-links{
       display:flex;
       gap:14px;
-      flex-wrap: wrap;
-      font-size: 14px;
+      flex-wrap:wrap;
+      font-size:14px;
     }
 
     .header{
       display:grid;
-      grid-template-columns: 165px 1fr;
-      gap: 24px;
-      align-items: start;
-      margin-top: 18px;
+      grid-template-columns:165px 1fr;
+      gap:24px;
+      align-items:start;
+      margin-top:18px;
     }
 
     .avatar{
-      width: 165px;
-      height: 220px;
-      border-radius: 8px;
-      object-fit: cover;
-      object-position: 50% 15%;
-      border: 1px solid var(--border);
-      box-shadow: none;
-      background: #fff;
-      display: block;
+      width:165px;
+      height:220px;
+      border-radius:8px;
+      object-fit:cover;
+      object-position:50% 15%;
+      border:1px solid var(--border);
+      background:#fff;
+      display:block;
     }
 
     .card{
       border:1px solid var(--border);
-      background: var(--card);
-      border-radius: 18px;
-      padding: 18px 18px 14px;
-      box-shadow: var(--shadow);
+      background:var(--card);
+      border-radius:18px;
+      padding:18px 18px 14px;
+      box-shadow:var(--shadow);
     }
 
     h1{
-      margin: 0 0 6px 0;
-      font-size: 38px;
-      letter-spacing: -0.5px;
+      margin:0 0 6px;
+      font-size:38px;
+      letter-spacing:-.5px;
     }
 
     .subtitle{
-      margin: 0 0 12px 0;
-      color: var(--muted);
-      font-size: 15px;
+      margin:0 0 12px;
+      color:var(--muted);
+      font-size:15px;
     }
 
     .links{
       display:flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-top: 10px;
-      font-size: 15px;
+      flex-direction:column;
+      gap:6px;
+      margin-top:10px;
+      font-size:15px;
     }
 
     .label{
       display:inline-block;
-      width: 86px;
-      color: var(--muted);
+      width:86px;
+      color:var(--muted);
     }
 
     .sub{
-      color: var(--muted);
-      font-size: 13px;
-      margin-left: 6px;
+      color:var(--muted);
+      font-size:13px;
+      margin-left:6px;
     }
 
     section{
-      margin-top: 26px;
-      padding-top: 10px;
+      margin-top:26px;
+      padding-top:10px;
     }
 
     h2{
-      margin: 0 0 10px 0;
-      font-size: 22px;
+      margin:0 0 10px;
+      font-size:22px;
     }
 
     h3{
-      margin: 14px 0 8px 0;
-      font-size: 17px;
-      color: #222;
+      margin:14px 0 8px;
+      font-size:17px;
+      color:#222;
     }
 
     ul{
-      padding-left: 18px;
-      margin: 8px 0 0;
+      padding-left:18px;
+      margin:8px 0 0;
     }
 
-    li{ margin: 10px 0; }
+    li{
+      margin:10px 0;
+    }
 
-    .pubtitle{ font-weight: 700; }
+    .pubtitle{
+      font-weight:700;
+    }
 
     .taglink{
       display:inline-block;
-      border: 1px solid var(--border);
-      background: #fff;
-      padding: 2px 8px;
-      border-radius: 999px;
-      font-size: 13px;
-      margin-left: 6px;
+      border:1px solid var(--border);
+      background:#fff;
+      padding:2px 8px;
+      border-radius:999px;
+      font-size:13px;
+      margin-left:6px;
     }
 
     .footer{
-      margin-top: 30px;
-      color: var(--muted);
-      font-size: 13px;
+      margin-top:30px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    @media (max-width:640px){
+      .wrap{
+        padding:20px 16px 44px;
+      }
+
+      .nav-inner{
+        padding:10px 16px;
+      }
+
+      .header{
+        grid-template-columns:1fr;
+      }
+
+      .avatar{
+        width:140px;
+        height:187px;
+      }
+
+      h1{
+        font-size:32px;
+      }
     }
   </style>
 </head>
@@ -175,6 +213,7 @@
   <div class="nav">
     <div class="nav-inner">
       <div class="nav-brand">Yixiu Xiao</div>
+
       <div class="nav-links">
         <a href="#about">ABOUT</a>
         <a href="#research-interests">RESEARCH</a>
@@ -182,38 +221,60 @@
         <a href="#talks">TALKS</a>
         <a href="#research-experience">EXPERIENCE</a>
         <a href="#teaching">TEACHING</a>
-        <a href="files/CV_Yixiu_Xiao_28_Apr_2026.pdf">CV</a>
+        <a href="files/CV_Yixiu_Xiao_30_July_2026.pdf">CV</a>
       </div>
     </div>
   </div>
 
   <div class="wrap">
     <div class="header">
-      <img class="avatar" src="assets/image_3.png" alt="Portrait of Yixiu Xiao" />
+      <img
+        class="avatar"
+        src="assets/image_3.png"
+        alt="Portrait of Yixiu Xiao"
+      />
 
       <div class="card">
         <h1>Yixiu Xiao (肖以修)</h1>
 
         <p class="subtitle">
-          PhD Candidate in Mathematics · Shanghai Jiao Tong University · Visiting Research Student at UNSW Sydney
+          PhD Candidate in Mathematics ·
+          <a
+            href="https://en.sjtu.edu.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Shanghai Jiao Tong University</a>
+          · Visiting Research Student at UNSW Sydney
         </p>
 
         <div class="links">
           <div>
             <span class="label">Email</span>
-            <a href="mailto:asaka1312@sjtu.edu.cn">asaka1312@sjtu.edu.cn</a>
-            <span class="sub">(SJTU)</span>
+            <a href="mailto:asaka1312@sjtu.edu.cn">
+              asaka1312@sjtu.edu.cn
+            </a>
+            <span class="sub">
+              (<a
+                href="https://en.sjtu.edu.cn/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >SJTU</a>)
+            </span>
           </div>
 
           <div>
             <span class="label">Email</span>
-            <a href="mailto:yixiu.xiao@unsw.edu.au">yixiu.xiao@unsw.edu.au</a>
+            <a href="mailto:yixiu.xiao@unsw.edu.au">
+              yixiu.xiao@unsw.edu.au
+            </a>
             <span class="sub">(UNSW)</span>
           </div>
 
           <div>
             <span class="label">Email</span>
-            <a href="mailto:yixiuxiao98@gmail.com">yixiuxiao98@gmail.com</a>
+            <a href="mailto:yixiuxiao98@gmail.com">
+              yixiuxiao98@gmail.com
+            </a>
             <span class="sub">(Personal)</span>
           </div>
         </div>
@@ -222,10 +283,49 @@
 
     <section id="about">
       <h2>About</h2>
+
       <ul>
-        <li>I am a PhD candidate in Mathematics at Shanghai Jiao Tong University, expecting to complete my PhD in March 2027.</li>
-        <li>I am currently a visiting research student at UNSW Sydney, working under the supervision of Prof. Igor E. Shparlinski.</li>
-        <li>My primary research area is analytic number theory, especially exponential sums, character sums, bilinear forms, and arithmetic distribution problems.</li>
+        <li>
+          I am a PhD candidate in Mathematics at
+          <a
+            href="https://en.sjtu.edu.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Shanghai Jiao Tong University</a>,
+          expecting to complete my PhD in March 2027.
+        </li>
+
+        <li>
+          My PhD advisor is
+          <a
+            href="https://en.zhiyuan.sjtu.edu.cn/en/faculty/54/detail"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Prof. Hongze Li</a>,
+          Professor in the School of Mathematical Sciences at
+          <a
+            href="https://en.sjtu.edu.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Shanghai Jiao Tong University</a>,
+          whose research focuses on analytic number theory.
+        </li>
+
+        <li>
+          I am currently a visiting research student at UNSW Sydney,
+          working under the supervision of
+          <a
+            href="https://web.maths.unsw.edu.au/~igorshparlinski/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Prof. Igor E. Shparlinski</a>.
+        </li>
+
+        <li>
+          My research is in analytic number theory, with particular
+          interests in exponential and character sums, sieve methods,
+          equidistribution, and Diophantine equations.
+        </li>
       </ul>
     </section>
 
@@ -233,23 +333,44 @@
       <h2>Research Interests</h2>
 
       <h3>Areas of interest</h3>
+
       <ul>
         <li>Analytic number theory</li>
         <li>Exponential sums, character sums, and bilinear forms</li>
-        <li>Kloosterman sums, Gauss sums, and Salié sums</li>
-        <li>Large sieve inequalities and arithmetic distribution problems</li>
-        <li>Harmonic analysis and additive combinatorics in number theory</li>
-        <li>Probabilistic aspects of analytic number theory</li>
+        <li>Kloosterman and Salié sums</li>
+        <li>
+          Sieve methods, large sieve inequalities, and the distribution
+          of primes
+        </li>
+        <li>Equidistribution modulo one and discrepancy theory</li>
+        <li>
+          Diophantine equations and the Hardy–Littlewood circle method
+        </li>
       </ul>
 
       <h3>Current directions</h3>
+
       <ul>
-        <li>Fractional parts, moment estimates, and discrepancy of sums of square roots</li>
-        <li>Bilinear sums involving Kloosterman and Gauss sums</li>
-        <li>Shifted bilinear sums of Salié sums and the distribution of modular square roots of shifted primes</li>
-        <li>Large sieve inequalities for character sums over short intervals</li>
-        <li>Möbius-related exponential sums via the delta circle method</li>
-        <li>Square-free parts of palindromes and related applications of sieve methods</li>
+        <li>
+          Sign changes of Kloosterman sums over square-free almost-prime
+          moduli
+        </li>
+        <li>
+          Moment estimates and discrepancy for sums of square roots
+          modulo one
+        </li>
+        <li>
+          Large sieve inequalities for quadratic character sums over
+          short intervals
+        </li>
+        <li>
+          Shifted bilinear sums of Salié sums and modular square roots
+          of shifted primes
+        </li>
+        <li>
+          Least non-trivial zeros of cubic forms and systems of additive
+          cubic equations
+        </li>
       </ul>
     </section>
 
@@ -257,72 +378,231 @@
       <h2>Publications</h2>
 
       <h3>Published</h3>
+
       <ul>
         <li>
           <span class="pubtitle">Least Zero of a Cubic Form</span>,
-          with Hongze Li,
+          with
+          <a
+            href="https://en.zhiyuan.sjtu.edu.cn/en/faculty/54/detail"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Hongze Li</a>,
           <i>Frontiers of Mathematics</i>, 2025.
+
           DOI:
-          <a href="https://doi.org/10.1007/s11464-024-0113-6">10.1007/s11464-024-0113-6</a>
+          <a href="https://doi.org/10.1007/s11464-024-0113-6">
+            10.1007/s11464-024-0113-6
+          </a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/abs/2404.00518"
+          >arXiv</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/pdf/2404.00518"
+          >PDF</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/html/2404.00518"
+          >HTML</a>
         </li>
 
         <li>
-          <span class="pubtitle">Least Zero of Pairs of Additive Cubic Equations</span>,
-          with Hongze Li,
+          <span class="pubtitle">
+            Least zero of pairs of additive cubic equations
+          </span>,
+          with
+          <a
+            href="https://en.zhiyuan.sjtu.edu.cn/en/faculty/54/detail"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Hongze Li</a>,
           <i>Forum Mathematicum</i>, 2026.
+
           DOI:
-          <a href="https://doi.org/10.1515/forum-2025-0367">10.1515/forum-2025-0367</a>
-          <a class="taglink" href="https://arxiv.org/abs/2510.10001">arXiv</a>
-          <a class="taglink" href="https://arxiv.org/pdf/2510.10001v2.pdf">PDF</a>
-          <a class="taglink" href="https://arxiv.org/html/2510.10001v2">HTML</a>
+          <a href="https://doi.org/10.1515/forum-2025-0367">
+            10.1515/forum-2025-0367
+          </a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/abs/2510.10001"
+          >arXiv</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/pdf/2510.10001"
+          >PDF</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/html/2510.10001"
+          >HTML</a>
         </li>
       </ul>
 
       <h3>Preprints (arXiv)</h3>
+
       <ul>
         <li>
-          <span class="pubtitle">Kloosterman sign changes with moduli having at most five prime factors</span>.
-          <a class="taglink" href="https://arxiv.org/abs/2607.10862">arXiv</a>
-          <a class="taglink" href="https://arxiv.org/pdf/2607.10862.pdf">PDF</a>
-          <a class="taglink" href="https://arxiv.org/html/2607.10862v1">HTML</a>
+          <span class="pubtitle">
+            Kloosterman sign changes with moduli having at most five
+            prime factors
+          </span>.
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/abs/2607.10862"
+          >arXiv</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/pdf/2607.10862"
+          >PDF</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/html/2607.10862"
+          >HTML</a>
         </li>
 
         <li>
-          <span class="pubtitle">Moment Estimates and Discrepancy for Sums of Square Roots Modulo One</span>.
-          <a class="taglink" href="https://arxiv.org/abs/2606.28986">arXiv</a>
-          <a class="taglink" href="https://arxiv.org/pdf/2606.28986.pdf">PDF</a>
-          <a class="taglink" href="https://arxiv.org/html/2606.28986v1">HTML</a>
+          <span class="pubtitle">
+            Moment Estimates and Discrepancy for Sums of Square Roots
+            Modulo One
+          </span>.
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/abs/2606.28986"
+          >arXiv</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/pdf/2606.28986"
+          >PDF</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/html/2606.28986"
+          >HTML</a>
         </li>
 
         <li>
-  <span class="pubtitle">Large Sieve Inequality for Sums of Legendre Symbols over Short Intervals</span>,
-  with Marc Munsch, Igor E. Shparlinski, and Yu-Chen Sun.
-  <a class="taglink" href="https://arxiv.org/abs/2604.23661">arXiv</a>
-  <a class="taglink" href="https://arxiv.org/pdf/2604.23661v2.pdf">PDF</a>
-  <a class="taglink" href="https://arxiv.org/html/2604.23661v2">HTML</a>
-</li>
+          <span class="pubtitle">
+            Large sieve inequality for sums of Legendre symbols over
+            short intervals
+          </span>,
+          with Marc Munsch,
+          <a
+            href="https://web.maths.unsw.edu.au/~igorshparlinski/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Igor E. Shparlinski</a>,
+          and Yu-Chen Sun.
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/abs/2604.23661"
+          >arXiv</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/pdf/2604.23661"
+          >PDF</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/html/2604.23661"
+          >HTML</a>
+        </li>
 
         <li>
-          <span class="pubtitle">Shifted Bilinear Sums of Salié Sums and the Distribution of Modular Square Roots of Shifted Primes</span>,
-          with Igor E. Shparlinski.
-          <a class="taglink" href="https://arxiv.org/abs/2601.10113">arXiv</a>
-          <a class="taglink" href="https://arxiv.org/pdf/2601.10113.pdf">PDF</a>
-          <a class="taglink" href="https://arxiv.org/html/2601.10113v1">HTML</a>
+          <span class="pubtitle">
+            Shifted bilinear sums of Salié sums and the distribution
+            of modular square roots of shifted primes
+          </span>,
+          with
+          <a
+            href="https://web.maths.unsw.edu.au/~igorshparlinski/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Igor E. Shparlinski</a>.
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/abs/2601.10113"
+          >arXiv</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/pdf/2601.10113"
+          >PDF</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/html/2601.10113"
+          >HTML</a>
         </li>
       </ul>
     </section>
 
     <section id="talks">
       <h2>Talks</h2>
+
+      <h3>Upcoming</h3>
+
       <ul>
         <li>
-          <span class="pubtitle">Diophantine equations and cubic forms</span>,
-          <span class="sub">Prime Pals / Number Theory Group Seminar (internal)</span>,
+          <span class="pubtitle">
+            Moment Estimates and Discrepancy for Sums of Square Roots
+            Modulo One
+          </span>,
+          <a
+            href="https://web.maths.unsw.edu.au/~alinaostafe/NTSeminar.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >UNSW Number Theory Seminar</a>,
+          UNSW Sydney, 5 Aug 2026, 14:00–15:00.
+        </li>
+
+        <li>
+          <span class="pubtitle">
+            Moment Estimates and Discrepancy for Sums of Square Roots
+            Modulo One
+          </span>,
+          <a
+            href="https://www.cimpa.info/en/node/7895"
+            target="_blank"
+            rel="noopener noreferrer"
+          >FOUVRY–73 Summer School</a>
+          <span class="sub">(short talk)</span>,
+          Bernoulli Center, EPFL, Lausanne, Switzerland,
+          25 Aug 2026, 17:30–17:50.
+        </li>
+      </ul>
+
+      <h3>Past</h3>
+
+      <ul>
+        <li>
+          <span class="pubtitle">
+            Diophantine equations and cubic forms
+          </span>,
+          <span class="sub">
+            Prime Pals / Number Theory Group Seminar (internal)
+          </span>,
           UNSW Canberra, Canberra, 9 Sep 2025.
         </li>
 
         <li>
-          <span class="pubtitle">Least zero of pairs of additive cubic equations</span>,
+          <span class="pubtitle">
+            Least zero of pairs of additive cubic equations
+          </span>,
           <span class="sub">AustMS Annual Meeting</span>,
           La Trobe University, Melbourne, 10 Dec 2025.
         </li>
@@ -331,55 +611,98 @@
 
     <section id="research-experience">
       <h2>Research Experience</h2>
+
       <ul>
         <li>
           <span class="pubtitle">Research Assistant</span>,
-          under the supervision of Prof. Hongze Li, Shanghai Jiao Tong University, 2021–present.
-          Conducted research in analytic number theory, including exponential sums, character sums,
-          Diophantine equations, and arithmetic distribution problems.
+          under the supervision of
+          <a
+            href="https://en.zhiyuan.sjtu.edu.cn/en/faculty/54/detail"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Prof. Hongze Li</a>,
+          <a
+            href="https://en.sjtu.edu.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Shanghai Jiao Tong University</a>,
+          2021–present.
+
+          Conducted research in analytic number theory, including
+          exponential sums, character sums, Diophantine equations,
+          and arithmetic distribution problems.
         </li>
 
         <li>
           <span class="pubtitle">Research Assistant</span>,
-          School of Mathematics and Statistics, UNSW Sydney, 7 April 2026–present.
-          Supervisor: Prof. Igor E. Shparlinski.
+          School of Mathematics and Statistics, UNSW Sydney,
+          7 April 2026–present.
+
+          Supervisor:
+          <a
+            href="https://web.maths.unsw.edu.au/~igorshparlinski/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Prof. Igor E. Shparlinski</a>.
         </li>
       </ul>
     </section>
 
     <section id="teaching">
       <h2>Teaching</h2>
+
       <ul>
         <li>
           <span class="pubtitle">Mathematical Analysis</span>,
-          Teaching Assistant, Shanghai Jiao Tong University, Fall terms 2021–2023.
+          Teaching Assistant,
+          <a
+            href="https://en.sjtu.edu.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Shanghai Jiao Tong University</a>,
+          Fall terms 2021–2023.
         </li>
 
         <li>
-          <span class="pubtitle">Elementary Number Theory (Summer Term)</span>,
-          Teaching Assistant, Shanghai Jiao Tong University, 2022–2024.
+          <span class="pubtitle">
+            Elementary Number Theory (Summer Term)
+          </span>,
+          Teaching Assistant,
+          <a
+            href="https://en.sjtu.edu.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Shanghai Jiao Tong University</a>,
+          2022–2024.
         </li>
 
         <li>
-          <span class="pubtitle">MATH8000 Student Support (Student Supervision)</span>,
+          <span class="pubtitle">
+            MATH8000 Student Support (Student Supervision)
+          </span>,
           UNSW Sydney, Term 3 2025.
         </li>
 
         <li>
-          <span class="pubtitle">MATH8000 Student Support (CTP)</span>,
+          <span class="pubtitle">
+            MATH8000 Student Support (CTP)
+          </span>,
           UNSW Sydney, Term 1 2026–present.
         </li>
 
         <li>
-          <span class="pubtitle">MATH1141 Higher Mathematics 1A</span>,
+          <span class="pubtitle">
+            MATH1141 Higher Mathematics 1A
+          </span>,
           Routine Marker, UNSW Sydney, Term 1 2026–present.
         </li>
       </ul>
     </section>
 
     <div class="footer">
-      Last updated: 16 Jul 2026
+      Last updated: 30 Jul 2026
     </div>
   </div>
 </body>
+
 </html>
