@@ -1,0 +1,792 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="肖以修的学术主页，主要研究方向为解析数论。"
+  />
+  <title>肖以修（Yixiu Xiao）｜个人主页</title>
+
+  <style>
+    :root{
+      --text:#111;
+      --muted:#666;
+      --border:#e6e6e6;
+      --link:#0b57d0;
+      --bg:#ffffff;
+      --card:#fbfbfb;
+      --shadow:0 8px 28px rgba(0,0,0,.06);
+    }
+
+    body{
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      margin:0;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.75;
+    }
+
+    img{
+      max-width:100%;
+    }
+
+    .wrap{
+      max-width:980px;
+      margin:0 auto;
+      padding:28px 20px 60px;
+    }
+
+    a{
+      color:var(--link);
+      text-decoration:none;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(255,255,255,.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+
+    .nav-inner{
+      max-width:980px;
+      margin:0 auto;
+      padding:10px 20px;
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+
+    .nav-brand{
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      font-size:14px;
+    }
+
+    .header{
+      display:grid;
+      grid-template-columns:165px 1fr;
+      gap:24px;
+      align-items:start;
+      margin-top:18px;
+    }
+
+    .avatar{
+      width:165px;
+      height:220px;
+      border-radius:8px;
+      object-fit:cover;
+      object-position:50% 15%;
+      border:1px solid var(--border);
+      background:#fff;
+      display:block;
+    }
+
+    .card{
+      border:1px solid var(--border);
+      background:var(--card);
+      border-radius:18px;
+      padding:18px 18px 14px;
+      box-shadow:var(--shadow);
+    }
+
+    h1{
+      margin:0 0 6px;
+      font-size:38px;
+      letter-spacing:-.5px;
+    }
+
+    .subtitle{
+      margin:0 0 12px;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .links{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      margin-top:10px;
+      font-size:15px;
+    }
+
+    .label{
+      display:inline-block;
+      width:86px;
+      color:var(--muted);
+    }
+
+    .sub{
+      color:var(--muted);
+      font-size:13px;
+      margin-left:6px;
+    }
+
+    section{
+      margin-top:26px;
+      padding-top:10px;
+    }
+
+    h2{
+      margin:0 0 10px;
+      font-size:22px;
+    }
+
+    h3{
+      margin:14px 0 8px;
+      font-size:17px;
+      color:#222;
+    }
+
+    ul{
+      padding-left:18px;
+      margin:8px 0 0;
+    }
+
+    li{
+      margin:10px 0;
+    }
+
+    .pubtitle{
+      font-weight:700;
+    }
+
+    .taglink{
+      display:inline-block;
+      border:1px solid var(--border);
+      background:#fff;
+      padding:2px 8px;
+      border-radius:999px;
+      font-size:13px;
+      margin-left:6px;
+    }
+
+    .footer{
+      margin-top:30px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    @media (max-width:640px){
+      .wrap{
+        padding:20px 16px 44px;
+      }
+
+      .nav-inner{
+        padding:10px 16px;
+      }
+
+      .header{
+        grid-template-columns:1fr;
+      }
+
+      .avatar{
+        width:140px;
+        height:187px;
+      }
+
+      h1{
+        font-size:32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="nav-brand">肖以修</div>
+
+      <div class="nav-links">
+        <a href="#about">个人简介</a>
+        <a href="#research-interests">研究方向</a>
+        <a href="#publications">论文与预印本</a>
+        <a href="#talks">学术报告</a>
+        <a href="#research-experience">科研经历</a>
+<a href="#scholarships-funding">奖学金与资助</a>
+<a href="#teaching">教学经历</a>
+<a href="files/CV_Yixiu_Xiao_5_November_2026.pdf">英文简历</a>
+<a href="index.html" lang="en" hreflang="en">English</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="header">
+      <img
+        class="avatar"
+        src="assets/image_3.png"
+        alt="肖以修的照片"
+      />
+
+      <div class="card">
+        <h1>肖以修（Yixiu Xiao）</h1>
+
+        <p class="subtitle">
+          数学博士研究生 ·
+          <a
+            href="https://en.sjtu.edu.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >上海交通大学</a>
+          
+        </p>
+
+        <div class="links">
+          <div>
+            <span class="label">电子邮箱</span>
+            <a href="mailto:asaka1312@sjtu.edu.cn">asaka1312@sjtu.edu.cn</a>
+            <span class="sub">
+              （<a
+                href="https://en.sjtu.edu.cn/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >上海交大</a>）
+            </span>
+          </div>
+
+          <div>
+            <span class="label">电子邮箱</span>
+            <a href="mailto:yixiu.xiao@unsw.edu.au">
+              yixiu.xiao@unsw.edu.au
+            </a>
+            <span class="sub">（新南威尔士大学）</span>
+          </div>
+
+          <div>
+            <span class="label">电子邮箱</span>
+            <a href="mailto:yixiuxiao98@gmail.com">
+              yixiuxiao98@gmail.com
+            </a>
+            <span class="sub">（个人邮箱）</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="about">
+  <h2>个人简介</h2>
+
+  <ul>
+    <li>
+      我是
+      <a
+        href="https://en.sjtu.edu.cn/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >上海交通大学</a>
+      数学博士研究生，预计于 2027 年 3 月完成博士学业。
+    </li>
+
+    <li>
+      我的博士生导师是
+      <a
+        href="http://math.sjtu.edu.cn/faculty/lihz/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Hongze Li 教授</a>。
+    </li>
+
+    <li>
+      2025 年 4 月至 2026 年 10 月，我在
+      <a
+        href="https://www.unsw.edu.au/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >新南威尔士大学（悉尼）</a>
+      以访问研究生身份开展研究，指导教师为
+      <a
+        href="https://web.maths.unsw.edu.au/~igorshparlinski/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Igor E. Shparlinski 教授</a>。
+    </li>
+
+    <li>
+      我的研究方向为解析数论，主要关注指数和与特征和、筛法、均匀分布以及丢番图方程。
+    </li>
+  </ul>
+</section>
+
+    <section id="research-interests">
+      <h2>研究方向</h2>
+
+      <h3>主要研究领域</h3>
+
+      <ul>
+        <li>解析数论</li>
+        <li>指数和、特征和与双线性型</li>
+        <li>Kloosterman 和与 Salié 和</li>
+        <li>
+          筛法、大筛不等式与素数分布
+        </li>
+        <li>模一均匀分布与偏差理论</li>
+        <li>
+          丢番图方程、Hardy–Littlewood 圆法与 delta 方法
+        </li>
+      </ul>
+
+      <h3>当前研究课题</h3>
+
+      <ul>
+        <li>
+          无平方因子的殆素数模数上的 Kloosterman 和的符号变化
+        </li>
+        <li>
+          平方根之和模一的矩估计与偏差
+        </li>
+        <li>
+          短区间二次特征和的大筛不等式
+        </li>
+        <li>
+          SL₂(ℤ) 矩阵范数的无平方因子值
+        </li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>论文与预印本</h2>
+
+      <h3>已发表论文</h3>
+
+      <ul>
+        <li>
+          <span class="pubtitle" lang="en">Least Zero of a Cubic Form</span>，
+          合作者：
+          <a
+            href="http://math.sjtu.edu.cn/faculty/lihz/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Hongze Li</a>，
+          <i>Frontiers of Mathematics</i> 21 (2026), no. 5, 1043–1069.
+
+          DOI:
+          <a href="https://doi.org/10.1007/s11464-024-0113-6">
+            10.1007/s11464-024-0113-6
+          </a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/abs/2404.00518"
+          >arXiv</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/pdf/2404.00518"
+          >PDF</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/html/2404.00518"
+          >HTML</a>
+        </li>
+
+        <li>
+          <span class="pubtitle" lang="en">
+            Least zero of pairs of additive cubic equations
+          </span>，
+          合作者：
+          <a
+            href="http://math.sjtu.edu.cn/faculty/lihz/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Hongze Li</a>，
+          <i>Forum Mathematicum</i> 38 (2026), no. 5, 1569–1598.
+
+          DOI:
+          <a href="https://doi.org/10.1515/forum-2025-0367">
+            10.1515/forum-2025-0367
+          </a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/abs/2510.10001"
+          >arXiv</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/pdf/2510.10001"
+          >PDF</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/html/2510.10001"
+          >HTML</a>
+        </li>
+      </ul>
+
+      <h3>预印本（arXiv）</h3>
+
+      <ul>
+        <li>
+          <span class="pubtitle" lang="en">
+            Selberg sieve weights and sign changes of Kloosterman sums.
+            II. Square-free moduli with at most four prime factors
+          </span>，
+          合作者：
+          <a
+            href="http://math.sjtu.edu.cn/faculty/lihz/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Hongze Li</a>。
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/abs/2609.24255"
+          >arXiv</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/pdf/2609.24255"
+          >PDF</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/html/2609.24255"
+          >HTML</a>
+        </li>
+
+        <li>
+          <span class="pubtitle" lang="en">
+            Selberg sieve weights and sign changes of Kloosterman sums.
+            I. Uniform asymptotics for shifted weights
+          </span>，
+          合作者：
+          <a
+            href="http://math.sjtu.edu.cn/faculty/lihz/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Hongze Li</a>。
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/abs/2609.24248"
+          >arXiv</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/pdf/2609.24248"
+          >PDF</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/html/2609.24248"
+          >HTML</a>
+        </li>
+
+        <li>
+          <span class="pubtitle" lang="en">
+            Arithmetic structure of <i>L</i><sub>2</sub>-norms of
+            SL<sub>2</sub>(ℤ) matrices
+          </span>，
+          合作者：
+          <a
+            href="https://web.maths.unsw.edu.au/~igorshparlinski/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Igor E. Shparlinski</a>。
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/abs/2609.21460"
+          >arXiv</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/pdf/2609.21460"
+          >PDF</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/html/2609.21460"
+          >HTML</a>
+        </li>
+
+        <li>
+          <span class="pubtitle" lang="en">
+            Kloosterman sign changes with moduli having at most five
+            prime factors
+          </span>。
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/abs/2607.10862"
+          >arXiv</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/pdf/2607.10862"
+          >PDF</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/html/2607.10862"
+          >HTML</a>
+        </li>
+
+        <li>
+          <span class="pubtitle" lang="en">
+            Moment Estimates and Discrepancy for Sums of Square Roots
+            Modulo One
+          </span>。
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/abs/2606.28986"
+          >arXiv</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/pdf/2606.28986"
+          >PDF</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/html/2606.28986"
+          >HTML</a>
+        </li>
+
+        <li>
+          <span class="pubtitle" lang="en">
+            Large sieve inequality for sums of Legendre symbols over
+            short intervals
+          </span>，
+          合作者：Marc Munsch、
+          <a
+            href="https://web.maths.unsw.edu.au/~igorshparlinski/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Igor E. Shparlinski</a>
+          及 Yu-Chen Sun。
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/abs/2604.23661"
+          >arXiv</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/pdf/2604.23661"
+          >PDF</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/html/2604.23661"
+          >HTML</a>
+        </li>
+
+        <li>
+          <span class="pubtitle" lang="en">
+            Shifted bilinear sums of Salié sums and the distribution
+            of modular square roots of shifted primes
+          </span>，
+          合作者：
+          <a
+            href="https://web.maths.unsw.edu.au/~igorshparlinski/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Igor E. Shparlinski</a>。
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/abs/2601.10113"
+          >arXiv</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/pdf/2601.10113"
+          >PDF</a>
+
+          <a
+            class="taglink"
+            href="https://arxiv.org/html/2601.10113"
+          >HTML</a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="talks">
+  <h2>学术报告</h2>
+
+  <h3>已作报告</h3>
+
+  <ul>
+    <li>
+      <span class="pubtitle" lang="en">
+        Moment Estimates and Discrepancy for Sums of Square Roots
+        Modulo One
+      </span>，
+      <a
+        href="https://bernoulli.epfl.ch/programs/fouvry-73/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >FOUVRY–73 暑期学校</a>
+      <span class="sub">（短报告）</span>，
+      瑞士洛桑，洛桑联邦理工学院（EPFL）伯努利中心，
+      2026 年 8 月 25 日。
+    </li>
+
+    <li>
+      <span class="pubtitle" lang="en">
+        Moment Estimates and Discrepancy for Sums of Square Roots
+        Modulo One
+      </span>，
+      <a
+        href="https://web.maths.unsw.edu.au/~alinaostafe/NTSeminar.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >新南威尔士大学数论讨论班</a>，
+      新南威尔士大学（悉尼），2026 年 8 月 5 日。
+    </li>
+
+    <li>
+      <span class="pubtitle" lang="en">
+        Least zero of pairs of additive cubic equations
+      </span>，
+      <a
+        href="https://austms2025.org.au/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >2025 年澳大利亚数学会年会（AustMS）</a>，
+      墨尔本，拉筹伯大学，2025 年 12 月 10 日。
+    </li>
+
+    <li>
+      <span class="pubtitle" lang="en">
+        Diophantine equations and cubic forms
+      </span>，
+      <span class="sub">
+        Prime Pals / 数论研究组讨论班（内部）
+      </span>，
+      堪培拉，新南威尔士大学堪培拉校区，2025 年 9 月 9 日。
+    </li>
+  </ul>
+</section>
+
+    
+    <section id="research-experience">
+      <h2>科研经历</h2>
+
+      <ul>
+        <li>
+          <span class="pubtitle">科研助理</span>，
+          指导教师：
+          <a
+            href="http://math.sjtu.edu.cn/faculty/lihz/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Hongze Li 教授</a>，
+          <a
+            href="https://en.sjtu.edu.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >上海交通大学</a>，
+          2021 年 9 月至今。
+
+          从事解析数论研究，包括指数和、特征和、丢番图方程及算术分布问题。
+        </li>
+
+        <li>
+          <span class="pubtitle">科研助理</span>，
+          新南威尔士大学（悉尼）数学与统计学院，
+          2026 年 4 月 7 日至 10 月 20 日。
+
+          指导教师：
+          <a
+            href="https://web.maths.unsw.edu.au/~igorshparlinski/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Igor E. Shparlinski 教授</a>。
+        </li>
+      </ul>
+    </section>
+
+    <section id="scholarships-funding">
+  <h2>奖学金与资助</h2>
+
+  <ul>
+    <li>
+      <strong>2026 年 — 博士生支持计划（PhD Support Scheme）</strong>，
+      新南威尔士大学（悉尼）数学与统计学院。
+    </li>
+    <li>
+      <strong>2024 年 — 国家留学基金管理委员会（CSC）奖学金。</strong>
+      资助以访问博士生身份赴澳大利亚开展研究，资助期限为 24 个月。
+    </li>
+  </ul>
+</section>
+
+    <section id="teaching">
+      <h2>教学经历</h2>
+
+      <ul>
+        <li>
+          <span class="pubtitle">数学分析</span>，
+          助教，
+          <a
+            href="https://en.sjtu.edu.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >上海交通大学</a>，
+          2021—2023 年秋季学期。
+        </li>
+
+        <li>
+          <span class="pubtitle">
+            初等数论（夏季学期）
+          </span>，
+          助教，
+          <a
+            href="https://en.sjtu.edu.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >上海交通大学</a>，
+          2022—2024 年。
+        </li>
+
+       <li>
+  <span class="pubtitle">MATH1231 数学 1B（Mathematics 1B）</span>，
+  课程批改与评分，新南威尔士大学（悉尼），2026 年第二学期。
+</li>
+
+<li>
+  <span class="pubtitle">MATH2018 工程数学 2D（Engineering Mathematics 2D）</span>，
+  课程批改与评分，新南威尔士大学（悉尼），2026 年第一学期。
+</li>
+
+<li>
+  <span class="pubtitle">MATH1141 高等数学 1A（Higher Mathematics 1A）</span>，
+  课程批改与评分，新南威尔士大学（悉尼），2026 年第一学期。
+</li>
+
+<li>
+  <span class="pubtitle">MATH8000 学生支持（Student Support）</span>，
+  考试监考与阅卷，新南威尔士大学（悉尼），
+  2025 年第三学期；2026 年第一、第二学期。
+</li>
+      </ul>
+    </section>
+
+    <div class="footer">
+      最后更新：2026 年 11 月 5 日
+    </div>
+  </div>
+</body>
+</html>
+
